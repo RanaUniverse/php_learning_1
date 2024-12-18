@@ -1,17 +1,16 @@
 <?php
 
-// Here i will keep the php logic
-
 $name = "Rana Universe";
 $age = 11;
 
-$greeting_txt = "Hello $name, How are you???";
-$greeting_txt2 = "Welcome, " . $name . "!";
-$greeting_txt3 = "Hello $name, you are $age years old!";
+// Determine the status based on age
+if ($age > 18) {
+    $status = "You are an adult.";
+} else {
+    $status = "You are a minor.";
+}
 
-$years_later = 5;
-$future_msg = "After {$years_later} year, you will become " . ($age + $years_later) . " Years Old";
-
+$sentence = "Hello " . strtoupper($name) . ", " . $status
 
 ?>
 
@@ -20,13 +19,7 @@ $future_msg = "After {$years_later} year, you will become " . ($age + $years_lat
 
 <body>
 
-    <h1>This is PHP Learning By Rana Universe <br>.........</h1>
-
-    <h1><?php echo $greeting_txt; ?></h1>
-    <h1><?php echo $greeting_txt2; ?></h1>
-    <h1><?php echo $greeting_txt3; ?></h1>
-    <h1><?php echo $future_msg; ?></h1>
-    <h1><?php echo $msg1; ?></h1>
+    <h1>Sentence: <?php echo $sentence; ?></h1>
 
 </body>
 
